@@ -62,7 +62,7 @@ typedef voronoi_diagram_type::const_edge_iterator const_edge_iterator;
 class Voronoi
 {
 public:
-    /* The returned polygon are voronoi regaions around the input polygons that
+    /* The returned polygon are voronoi regions around the input polygons that
      * follow the voronoi diagram.  The loops might extend outside the
      * bounding_box provided.  The loops don't overlap and will together cover
      * at least the entire bounding_box.  The order and number of outputs is the
