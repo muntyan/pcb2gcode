@@ -842,10 +842,10 @@ vector<pair<int, multi_linestring_type_fp>> ExcellonProcessor::optimize_holes(
   //  vector<pair<int, multi_linestring_type_fp>> sorted_holes(holes.cbegin(), holes.cend());
   vector<pair<int, multi_linestring_type_fp>> sorted_holes(holes.cbegin(), holes.cend());
 
-  std::sort(sorted_holes.begin(), sorted_holes.end(), [&bits](const auto& a, const auto& b) {
-    return bits[a.first].as_length().asInch(1) < bits[b.first].as_length().asInch(1);
-  });
-
+  // ymuntyan: no, don't sort
+  // std::sort(sorted_holes.begin(), sorted_holes.end(), [&bits](const auto& a, const auto& b) {
+  //   return bits[a.first].as_length().asInch(1) < bits[b.first].as_length().asInch(1);
+  // });
 
   return sorted_holes;
 }
