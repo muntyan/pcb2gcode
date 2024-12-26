@@ -232,6 +232,7 @@ void Surface_vectorial::write_svgs(const string& tool_suffix, coordinate_type_fp
     cerr << "\nWarning: pcb2gcode hasn't been able to fulfill all"
         " clearance requirements.  Check the contentions output"
         " and consider using a smaller milling bit.\n";
+    throw std::runtime_error("contentions found");
   }
   srand(1);
   debug_image.add(vectorial_surface->first, 1, true);
